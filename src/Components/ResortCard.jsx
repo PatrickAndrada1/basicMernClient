@@ -6,7 +6,7 @@ function ResortCard(){
   const [dataResort, setDataResort] = useState([]);
 
   useEffect(() => {
-    Axios.get(baseURL + 'getResort')
+    Axios.get(baseURL)
       .then((res) => {
         setDataResort(res.data.data);
         console.log(res.data.data);
