@@ -6,7 +6,7 @@ function ResortCard(){
   const [dataResort, setDataResort] = useState([]);
 
   useEffect(() => {
-    Axios.get(baseURL)
+    Axios.get('https://patbasicmernserver-git-main-patrickandrada1.vercel.app/')
       .then((res) => {
         setDataResort(res.data.data);
         console.log(res.data.data);
