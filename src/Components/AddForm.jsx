@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
-const baseUrl = "http://localhost:3000"
+let baseURL = 'https://patbasicmernserver-git-main-patrickandrada1.vercel.app/'
 
 
 function AddForm() {
@@ -19,7 +19,7 @@ function AddForm() {
       price
     }
     setLoading(true)
-    axios.post(`http://localhost:3000/addResort`, data)
+    axios.post(baseURL + 'addResort', data)
     .then(()=>{
      setLoading(false)
      navigate('/')
