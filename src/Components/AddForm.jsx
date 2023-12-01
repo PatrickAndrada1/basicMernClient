@@ -1,5 +1,5 @@
-import axios from 'axios'
 import React, {useState} from 'react'
+import Axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 let baseURL = 'https://patbasicmernserver-git-main-patrickandrada1.vercel.app/'
 
@@ -19,7 +19,7 @@ function AddForm() {
       price
     }
     setLoading(true)
-    axios.post(baseURL + 'addResort', data)
+    Axios.post(baseURL + 'addResort', data)
     .then(()=>{
      setLoading(false)
      navigate('/')
