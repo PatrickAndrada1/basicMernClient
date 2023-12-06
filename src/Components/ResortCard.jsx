@@ -4,14 +4,11 @@ let baseURL = 'https://patbasicmernserver-git-main-patrickandrada1.vercel.app/'
 
 function ResortCard(){
   const [dataResort, setDataResort] = useState([]);
-  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    setLoading(true)
     Axios.get(baseURL + 'getResort')
       .then((res) => {
         setDataResort(res.data.data);
-        setLoading(false)
         console.log(res.data.data);
       })
       .catch((error) => {

@@ -9,7 +9,6 @@ function AddForm() {
   const [name, setName] = useState("")
   const [location, setLocation] = useState("")
   const [price, setPrice] = useState("")
-  const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
   
   const handleSaveResort = ()=>{
@@ -18,14 +17,11 @@ function AddForm() {
       location,
       price
     }
-    setLoading(true)
     Axios.post(baseURL + 'addResort', data)
     .then(()=>{
-     setLoading(false)
      navigate('/')
     })
     .catch((error)=>{
-      setLoading(false)
       console.log(error)
     })
   }
