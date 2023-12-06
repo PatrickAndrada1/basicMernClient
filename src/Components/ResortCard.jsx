@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
+import {Link} from 'react-router-dom'
 let baseURL = 'https://patbasicmernserver-git-main-patrickandrada1.vercel.app/'
 
 function ResortCard(){
@@ -31,8 +32,7 @@ function ResortCard(){
             <th className='border border-slate-600 rounded-md'>Name</th>
             <th className='border border-slate-600 rounded-md'>Location</th>
             <th className='border border-slate-600 rounded-md'>Price</th>
-            {/* <th className='border border-slate-600 rounded-md max-md:hidden'>Details</th>
-            <th className='border border-slate-600 rounded-md max-md:hidden'>Action</th> */}
+            <th className='border border-slate-600 rounded-md max-md:hidden'>More</th>
           </tr>
         </thead>
         <tbody>
@@ -50,12 +50,12 @@ function ResortCard(){
               <td className='border border-slate-700 rounded-md text-center'>
                 {item.price}
               </td>
-              {/* <td className='border border-slate-700 rounded-md text-center'>
-                {item.price}
+              <td className='border border-slate-700 rounded-md text-center'>
+                <Link to={`/details/${item._id}`}>Detail</Link>
               </td>
               <td className='border border-slate-700 rounded-md text-center'>
-                {item.price}
-              </td> */}
+                <Link to={`/delete/${item._id}`}>Delete</Link>
+              </td>
             </tr>
           ))}
         </tbody>
