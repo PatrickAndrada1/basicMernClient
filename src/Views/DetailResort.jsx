@@ -19,7 +19,7 @@ const DetailResort = () => {
     }, [])
   return (
     <div className='p-4'>
-        <div className='flex flex-col border-2 border-sky-4000 rounded-xl w-fit p-4'>
+        <div className='flex flex-col border-sky-4000 rounded-xl w-fit p-4'>
             <div className='my-4'>
                 <span className='text-xl mr-4 text-gray-500'>Id</span>
                 <span>{detail._id}</span>
@@ -40,5 +40,7 @@ const DetailResort = () => {
     </div>
   )
 }
+
+const ForContent = {width :"100px", height: "200px", margin: "auto"}
 
 export default DetailResort

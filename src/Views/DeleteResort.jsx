@@ -8,7 +8,7 @@ const DeleteResort = () => {
     const {id} = useParams()
 
     const handleDelete = ()=>{
-        Axios.delete(`https://patbasicmernserver-git-main-patrickandrada1.vercel.app/deleteResort/${id}`)
+        Axios.delete(baseURL + id)
         .then(()=>{
             navigate('/')
             alert('Villa has been deleted')
